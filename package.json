@@ -1,0 +1,21 @@
+{
+  "name": "xlNodeToJson",
+  "version": "1.0.0",
+  "description": "下载在线excel转换成json对象",
+  "main": "cli.js",
+  "bin": {
+    "kdc": "./cli.js"
+  },
+  "license": "MIT",
+  "author": "xl",
+  "files": [
+    "README.md"
+  ],
+  "dependencies": {
+    "commander": "^8.3.0",
+    "inquirer": "^8.2.0",
+    "node": "^17.4.0",
+    "node-xlsx": "^0.21.0",
+    "request": "^2.88.2"
+  }
+}
