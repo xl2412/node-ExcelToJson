@@ -1,0 +1,17 @@
+FROM node:14.5.0 AS builder
+
+WORKDIR /opt/web
+
+ENV PATH="./node_modules/.bin:$PATH"
+
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
+
+COPY . ./
+
+RUN yarn install
+RUN yarn run build
+
+EXPOSE 3000
+
+CMD ["node","./dist/src/app.js"]
